@@ -11,7 +11,7 @@
     "bugs": {
         "url": "https://github.com/versia-pub/blog/issues"
     },
-    "license": "CC0-1.0",
+    "license": "AGPL-3.0-only",
     "maintainers": [
         {
             "email": "contact@cpluspatch.com",
