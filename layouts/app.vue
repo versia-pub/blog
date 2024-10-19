@@ -1,5 +1,5 @@
 <template>
-  <div :class="[$style.content, 'w-full h-full bg-gradient-to-tr from-zinc-900 to-zinc-800']">
+  <div :class="[$style.content, 'w-full h-full min-h-screen bg-gradient-to-tr from-zinc-900 to-zinc-800']">
     <slot />
   </div>
 </template>
