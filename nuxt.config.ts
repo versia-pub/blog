@@ -1,6 +1,7 @@
 import { readdirSync } from "node:fs";
 import { join } from "node:path";
 import { defineNuxtConfig } from "nuxt/config";
+import { org } from "./types/schemas.ts";
 
 /*
  * Reads the content directory and returns an array of all the files in the directory and subdirectories.
@@ -108,6 +109,28 @@ export default defineNuxtConfig({
         minify: true,
         prerender: {
             failOnError: true,
+        },
+    },
+    app: {
+        head: {
+            link: [
+                {
+                    rel: "icon",
+                    href: "/favicon.png",
+                    type: "image/png",
+                },
+            ],
+            htmlAttrs: {
+                lang: "en-us",
+            },
+        },
+    },
+    schemaOrg: {
+        identity: {
+            name: "Versia",
+            logo: "https://versia.pub/#logo",
+            url: "https://versia.pub",
+            sameAs: [],
         },
     },
 });

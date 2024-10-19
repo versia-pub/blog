@@ -3,6 +3,8 @@ title: A test post for the Versia Blog
 created_at: 1700020246000
 description: This is a test post for the Versia Blog. I write this post to test the blog system.
 image: https://images.pexels.com/photos/2646237/pexels-photo-2646237.jpeg
+image_width: 6000
+image_height: 4000
 author: CPlusPatch
 author_image: https://mk-cdn.cpluspatch.com/uploads/5cd850d3-6b6b-4543-97ca-9854b9dbf9f3.webp
 author_handle: @jessewh

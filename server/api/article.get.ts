@@ -1,4 +1,3 @@
-import { join } from "node:path";
 import { getPost } from "~/composables/server/Post";
 import { createError, defineEventHandler } from "#imports";
 

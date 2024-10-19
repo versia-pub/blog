@@ -12,8 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from "vue";
-
 defineProps<{
     title: string;
     created_at: string;

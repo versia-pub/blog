@@ -2,6 +2,8 @@ export interface FrontMatter {
     title: string;
     description: string;
     image: string;
+    image_width?: number;
+    image_height?: number;
     created_at: string;
     private?: string;
     author: string;
@@ -12,7 +14,11 @@ export interface FrontMatter {
 export interface Post {
     title: string;
     description: string;
-    image: string;
+    image: {
+        url: string;
+        width?: number;
+        height?: number;
+    };
     banner?: string;
     author: Author;
     private: boolean;

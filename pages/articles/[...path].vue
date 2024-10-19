@@ -1,7 +1,7 @@
 <template>
     <div v-if="post" class="mx-auto max-w-3xl py-24 sm:py-32 px-6 lg:px-8 flex flex-col items-center gap-10">
         <Title v-if="post.title" :created_at="post.created_at" :title="post.title" />
-        <Image v-if="post.image" :image="post.image" />
+        <Image v-if="post.image" :image="post.image.url" :width="post.image.width" :height="post.image.height" />
         <Content :body="body" />
     </div>
 </template>
@@ -36,12 +36,19 @@ if (!post.value) {
 
 useSchemaOrg([
     defineArticle({
-        // author: post.value.author.name,
+        author: {
+            name: post.value.author.name,
+            image: post.value.author.image,
+        },
         datePublished: post.value.created_at,
-        image: post.value.image,
+        image: {
+            url: post.value.image.url,
+            width: post.value.image.width,
+            height: post.value.image.height,
+        },
         description: post.value.description,
         inLanguage: "en-US",
-        thumbnailUrl: post.value.image,
+        thumbnailUrl: post.value.image.url,
     }),
 ]);
 
@@ -51,8 +58,11 @@ useServerSeoMeta({
     author: post.value.author.name,
     description: post.value.description,
     ogDescription: post.value.description,
-    ogImage: post.value.image,
+    ogImage: post.value.image.url,
+    ogImageHeight: post.value.image.height,
+    ogImageWidth: post.value.image.width,
     twitterCard: "summary_large_image",
+    twitterImage: post.value.image.url,
 });
 
 let body = post.value.content;

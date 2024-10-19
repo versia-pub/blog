@@ -40,7 +40,13 @@ export const getPost = async (path: string): Promise<Post | null> => {
         content: renderedBody,
         created_at: new Date(Number(header.created_at || 0)).toISOString(),
         description: header.description,
-        image: header.image,
+        image: {
+            url: header.image,
+            width: header.image_width ? Number(header.image_width) : undefined,
+            height: header.image_height
+                ? Number(header.image_height)
+                : undefined,
+        },
         title: header.title,
         path,
     };
