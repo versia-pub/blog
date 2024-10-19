@@ -1,4 +1,34 @@
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
 import { defineNuxtConfig } from "nuxt/config";
+
+/*
+ * Reads the content directory and returns an array of all the files in the directory and subdirectories.
+ */
+const getRouteRenderingPaths = () => {
+    const contentDir = join(process.cwd(), "content");
+    const paths: string[] = [];
+
+    const readDir = (dir: string) => {
+        const files = readdirSync(dir);
+        for (const file of files) {
+            const filePath = join(dir, file);
+            if (file.endsWith(".md")) {
+                paths.push(
+                    filePath
+                        .replace(contentDir, "/articles")
+                        .replace(".md", ""),
+                );
+            } else {
+                readDir(filePath);
+            }
+        }
+    };
+
+    readDir(contentDir);
+
+    return paths;
+};
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -65,6 +95,13 @@ export default defineNuxtConfig({
     },
     image: {
         domains: ["images.pexels.com"],
+    },
+    sitemap: {
+        sources: [...getRouteRenderingPaths(), "/"],
+    },
+    // For sitemap generation
+    site: {
+        url: "https://versia.blog",
     },
     nitro: {
         preset: "bun",
