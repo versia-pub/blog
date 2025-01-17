@@ -1,7 +1,7 @@
 <template>
     <div v-if="post" class="mx-auto max-w-3xl py-24 sm:py-32 px-6 lg:px-8 flex flex-col items-center gap-10">
         <Title v-if="post.title" :created_at="post.created_at" :title="post.title" />
-        <Image v-if="post.image" :image="post.image.url" :width="post.image.width" :height="post.image.height" />
+        <Image v-if="post.image" :image="post.image.url" :width="post.image.width" :height="post.image.height" :caption="post.image.credit" />
         <Content :body="body" />
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto max-w-2xl text-center flex items-center justify-center gap-8 flex-col">
-        <h1 v-if="title" class="text-4xl font-bold tracking-tight text-gray-50 sm:text-5xl">
+        <h1 v-if="title" class="text-4xl font-bold tracking-tight text-gray-50 sm:text-5xl font-title">
             {{ title }}
         </h1>
         <div>
@@ -18,7 +18,7 @@ defineProps<{
 }>();
 
 const formatDate = (date?: string) => {
-    return new Intl.DateTimeFormat(undefined, {
+    return new Intl.DateTimeFormat("en-GB", {
         year: "numeric",
         month: "long",
         day: "numeric",

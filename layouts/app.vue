@@ -1,11 +1,8 @@
+<script setup lang="ts">
+</script>
+
 <template>
-    <main :class="[$style.content, 'w-full h-full min-h-screen bg-gradient-to-tr from-zinc-900 to-zinc-800']">
+    <main :class="['size-full min-h-screen bg-zinc-900 font-sans']">
         <slot />
     </main>
 </template>
-
-<style lang="css" module>
-.content {
-    font-family: Inter, sans-serif;
-}
-</style>

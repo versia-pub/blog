@@ -2,6 +2,7 @@ export interface FrontMatter {
     title: string;
     description: string;
     image: string;
+    image_credit?: string;
     image_width?: number;
     image_height?: number;
     created_at: string;
@@ -16,6 +17,7 @@ export interface Post {
     description: string;
     image: {
         url: string;
+        credit?: string;
         width?: number;
         height?: number;
     };

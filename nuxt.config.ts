@@ -94,6 +94,23 @@ export default defineNuxtConfig({
     future: {
         compatibilityVersion: 4,
     },
+    fonts: {
+        defaults: {
+            subsets: ["latin", "latin-ext"],
+        },
+    },
+    security: {
+        headers: {
+            contentSecurityPolicy: {
+                "img-src": [
+                    "'self'",
+                    "data:",
+                    "images.pexels.com",
+                    "cdn.versia.pub",
+                ],
+            },
+        },
+    },
     image: {
         domains: ["images.pexels.com"],
     },

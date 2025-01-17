@@ -46,6 +46,7 @@ export const getPost = async (path: string): Promise<Post | null> => {
             height: header.image_height
                 ? Number(header.image_height)
                 : undefined,
+            credit: header.image_credit,
         },
         title: header.title,
         path,

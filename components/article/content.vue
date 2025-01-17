@@ -1,7 +1,4 @@
 <template>
-    <!-- <article
-        class="$style.content mx-auto max-w-3xl prose prose-invert mt-10 prose-code:before:content-none prose-code:after:content-none prose-a:text-orange-500 prose-a:underline"
-        v-html="body"></article> -->
     <article :class="[$style.content, 'prose prose-invert prose-code:before:content-none prose-code:after:content-none']" v-html="body"></article>
 </template>
 
@@ -29,8 +26,12 @@ defineProps<{
     @apply h-6 w-6 flex-none rounded-full bg-gray-800;
 }
 
+.content :global :has(.header-anchor):hover .header-anchor {
+    @apply opacity-100;
+}
+
 .content :global .header-anchor {
-    @apply no-underline absolute w-16 md:w-auto text-right left-[calc(100%-3.75rem)] md:-left-10 text-gray-200
+    @apply no-underline absolute size-6 md:w-auto text-right opacity-0 duration-75 left-[calc(100%-3.75rem)] md:-left-10 text-gray-200
 }
 
 .content :global .header-anchor::before {
