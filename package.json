@@ -1,65 +1,71 @@
 {
-  "name": "@versia/blog",
-  "private": true,
-  "type": "module",
-  "description": "The source code for Versia's blog.",
-  "author": {
-    "email": "contact@cpluspatch.com",
-    "name": "Jesse Wierzbinski",
-    "url": "https://cpluspatch.com"
-  },
-  "bugs": {
-    "url": "https://github.com/versia-pub/blog/issues"
-  },
-  "license": "AGPL-3.0-only",
-  "maintainers": [
-    {
-      "email": "contact@cpluspatch.com",
-      "name": "Jesse Wierzbinski",
-      "url": "https://cpluspatch.com"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/versia-pub/blog.git"
-  },
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "bunx @biomejs/biome check .",
-    "typecheck": "bunx tsc -p ."
-  },
-  "dependencies": {
-    "@hackmd/markdown-it-task-lists": "^2.1.4",
-    "@nuxt/fonts": "^0.10.3",
-    "@nuxt/icon": "^1.10.3",
-    "@nuxt/image": "^1.9.0",
-    "@nuxtjs/seo": "^2.0.3",
-    "@nuxtjs/tailwindcss": "^6.13.1",
-    "@shikijs/markdown-it": "^1.27.2",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16",
-    "@vueuse/nuxt": "^12.4.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.2.0",
-    "markdown-it-container": "^4.0.0",
-    "markdown-it-toc-done-right": "^4.2.0",
-    "nuxt": "^3.15.2",
-    "nuxt-security": "^2.1.5",
-    "sharp": "^0.33.5",
-    "shiki": "^1.27.2",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@iconify-json/tabler": "^1.2.14",
-    "@types/bun": "^1.1.17",
-    "@types/markdown-it-container": "^2.0.10",
-    "tailwindcss": "^3.4.17"
-  },
-  "trustedDependencies": ["@biomejs/biome", "@parcel/watcher", "esbuild", "sharp", "vue-demi"]
+    "name": "@versia/blog",
+    "private": true,
+    "type": "module",
+    "description": "The source code for Versia's blog.",
+    "author": {
+        "email": "contact@cpluspatch.com",
+        "name": "Jesse Wierzbinski",
+        "url": "https://cpluspatch.com"
+    },
+    "bugs": {
+        "url": "https://github.com/versia-pub/blog/issues"
+    },
+    "license": "AGPL-3.0-only",
+    "maintainers": [
+        {
+            "email": "contact@cpluspatch.com",
+            "name": "Jesse Wierzbinski",
+            "url": "https://cpluspatch.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/versia-pub/blog.git"
+    },
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint": "bunx @biomejs/biome check .",
+        "typecheck": "bunx tsc -p ."
+    },
+    "dependencies": {
+        "@hackmd/markdown-it-task-lists": "^2.1.4",
+        "@nuxt/fonts": "^0.10.3",
+        "@nuxt/icon": "^1.10.3",
+        "@nuxt/image": "^1.9.0",
+        "@nuxtjs/seo": "^2.0.3",
+        "@nuxtjs/tailwindcss": "^6.13.1",
+        "@shikijs/markdown-it": "^1.27.2",
+        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/typography": "^0.5.16",
+        "@vueuse/nuxt": "^12.4.0",
+        "markdown-it": "^14.1.0",
+        "markdown-it-anchor": "^9.2.0",
+        "markdown-it-container": "^4.0.0",
+        "markdown-it-toc-done-right": "^4.2.0",
+        "nuxt": "^3.15.2",
+        "nuxt-security": "^2.1.5",
+        "sharp": "^0.33.5",
+        "shiki": "^1.27.2",
+        "vue": "^3.5.13",
+        "vue-router": "^4.5.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "@iconify-json/tabler": "^1.2.14",
+        "@types/bun": "^1.1.17",
+        "@types/markdown-it-container": "^2.0.10",
+        "tailwindcss": "^3.4.17"
+    },
+    "trustedDependencies": [
+        "@biomejs/biome",
+        "@parcel/watcher",
+        "esbuild",
+        "sharp",
+        "vue-demi"
+    ]
 }

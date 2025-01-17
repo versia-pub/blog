@@ -119,7 +119,7 @@ export default defineNuxtConfig({
         ]),
     ),
     image: {
-        domains: ["images.pexels.com"],
+        domains: ["images.pexels.com", "cpluspatch.com"],
     },
     sitemap: {
         sources: [...getRouteRenderingPaths(), "/"],

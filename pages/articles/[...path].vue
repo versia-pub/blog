@@ -3,10 +3,12 @@
         <Title v-if="post.title" :created_at="post.created_at" :title="post.title" />
         <Image v-if="post.image" :image="post.image.url" :width="post.image.width" :height="post.image.height" :caption="post.image.credit" />
         <Content :body="body" />
+        <Author v-if="post.author" :avatar="post.author.image" :name="post.author.name" :handle="post.author.handle" class="mt-10" />
     </div>
 </template>
 
 <script lang="ts" setup>
+import Author from "~/components/article/author.vue";
 import Content from "~/components/article/content.vue";
 import Image from "~/components/article/image.vue";
 import Title from "~/components/article/title.vue";
