@@ -1,7 +1,6 @@
 import { readdirSync } from "node:fs";
 import { join } from "node:path";
 import { defineNuxtConfig } from "nuxt/config";
-import { org } from "./types/schemas.ts";
 
 /*
  * Reads the content directory and returns an array of all the files in the directory and subdirectories.
@@ -111,6 +110,14 @@ export default defineNuxtConfig({
             },
         },
     },
+    routeRules: Object.fromEntries(
+        getRouteRenderingPaths().map((path) => [
+            path,
+            {
+                prerender: true,
+            },
+        ]),
+    ),
     image: {
         domains: ["images.pexels.com"],
     },
